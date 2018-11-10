@@ -18,18 +18,18 @@ http://localhost:8080/
 
 Data for test:
 
-#mutation createLink {
-#  createLink(url:"https://marcustest2.com",description: "teste marcus2") {
-#    description
-#  }
-#}
+mutation createLink {
+  createLink(url:"https://marcustest2.com",description: "teste marcus2") {
+    description
+  }
+}
 
 
-#query {
-#  allLinks {
-#   description
-# }
-#}
+query {
+  allLinks {
+   description
+ }
+}
 
 mutation {
   createUser(
