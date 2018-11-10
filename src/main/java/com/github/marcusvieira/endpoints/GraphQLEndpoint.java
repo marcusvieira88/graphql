@@ -1,8 +1,13 @@
-package com.github.marcusvieira;
+package com.github.marcusvieira.endpoints;
 
 import com.coxautodev.graphql.tools.SchemaParser;
 import javax.servlet.annotation.WebServlet;
 
+import com.github.marcusvieira.repositories.LinkRepository;
+import com.github.marcusvieira.repositories.UserRepository;
+import com.github.marcusvieira.resolvers.MutationResolver;
+import com.github.marcusvieira.resolvers.QueryResolver;
+import com.github.marcusvieira.resolvers.SigninResolver;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
 import graphql.schema.GraphQLSchema;

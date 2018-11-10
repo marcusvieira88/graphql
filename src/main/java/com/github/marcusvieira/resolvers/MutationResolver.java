@@ -1,6 +1,12 @@
-package com.github.marcusvieira;
+package com.github.marcusvieira.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLRootResolver;
+import com.github.marcusvieira.dtos.AuthData;
+import com.github.marcusvieira.dtos.Link;
+import com.github.marcusvieira.dtos.SigninPayload;
+import com.github.marcusvieira.dtos.User;
+import com.github.marcusvieira.repositories.LinkRepository;
+import com.github.marcusvieira.repositories.UserRepository;
 import graphql.GraphQLException;
 
 public class MutationResolver implements GraphQLRootResolver {

@@ -1,4 +1,4 @@
-package com.github.marcusvieira;
+package com.github.marcusvieira.dtos;
 
 public class User {
 

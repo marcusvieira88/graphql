@@ -1,5 +1,6 @@
-package com.github.marcusvieira;
+package com.github.marcusvieira.repositories;
 
+import com.github.marcusvieira.dtos.Link;
 import com.mongodb.client.MongoCollection;
 import org.bson.Document;
 import org.bson.types.ObjectId;

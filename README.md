@@ -15,3 +15,29 @@ mvn jetty:run
 And access the url:
 
 http://localhost:8080/
+
+Data for test:
+
+#mutation createLink {
+#  createLink(url:"https://marcustest2.com",description: "teste marcus2") {
+#    description
+#  }
+#}
+
+
+#query {
+#  allLinks {
+#   description
+# }
+#}
+
+mutation {
+  createUser(
+    name: "Marcus Vieira"
+    authProvider: {
+      email:"teste@teste.com"
+    	password: "12345678"}) {
+    id
+    name
+  }
+}

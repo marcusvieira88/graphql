@@ -1,6 +1,8 @@
-package com.github.marcusvieira;
+package com.github.marcusvieira.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLRootResolver;
+import com.github.marcusvieira.dtos.Link;
+import com.github.marcusvieira.repositories.LinkRepository;
 
 import java.util.List;
 
