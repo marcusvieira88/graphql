@@ -99,3 +99,60 @@ query {
   	}
   }
 }
+
+Old SCHEMA before implement annotations
+
+type Link {
+  id: ID!
+  url: String!
+  description: String
+  postedBy: User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String
+  password: String
+}
+
+input AuthData {
+  email: String!
+  password: String!
+}
+
+type SigninPayload {
+  token: String
+  user: User
+}
+
+type Vote {
+  id: ID!
+  createdAt: DateTime!
+  user: User!
+  link: Link!
+}
+
+scalar DateTime
+
+type QueryResolver {
+  allLinks(filter: LinkFilter, skip: Int = 0, first: Int = 0): [Link]
+}
+
+input LinkFilter {
+  description_contains: String
+  url_contains: String
+}
+
+type MutationResolver {
+  createUser(name: String!, authProvider: AuthData!): User
+  createLink(url: String!, description: String!): Link
+  signinUser(auth: AuthData): SigninPayload
+   createVote(linkId: ID, userId: ID): Vote
+}
+
+
+schema {
+  query: QueryResolver,
+  mutation: MutationResolver
+}
