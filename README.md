@@ -1,4 +1,4 @@
-Introduction
+# Introduction
 
 This project was used for learn and pratice all the graphql features.
 
@@ -9,15 +9,15 @@ First install the mongodb:
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
 For run the project you need to start the server:
-
+```
 mvn jetty:run
-
+```
 And access the url:
 
 http://localhost:8080/
 
 Data for test:
-
+```
 mutation {
   createLink(url:"https://marcustest12.com",description: "teste marcus12") {
    description
@@ -99,9 +99,10 @@ query {
   	}
   }
 }
+```
 
-Old SCHEMA before implement annotations
-
+SCHEMA file if you don't want to work with annotations:
+```
 type Link {
   id: ID!
   url: String!
@@ -151,8 +152,8 @@ type MutationResolver {
    createVote(linkId: ID, userId: ID): Vote
 }
 
-
 schema {
   query: QueryResolver,
   mutation: MutationResolver
 }
+```
