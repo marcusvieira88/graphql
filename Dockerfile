@@ -38,9 +38,9 @@ VOLUME /root/.m2
 #RUN sudo apt-get install -y oracle-java8-installer
 
 RUN apt-get update
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:webupd8team/java
-RUN apt-get install -y oracle-java8-installer
+RUN sudo apt-get install python-software-properties
+RUN sudo add-apt-repository ppa:webupd8team/java
+RUN sudo apt-get install oracle-java8-set-default
 
 COPY pom.xml /tmp/
 COPY src /tmp/src/
